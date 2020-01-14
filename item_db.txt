@@ -1,0 +1,5 @@
+shortsword,8,
+longsword,10,
+club,12,
+novice axe,13,
+hunter's dagger,5
