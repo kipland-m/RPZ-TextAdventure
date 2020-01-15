@@ -1,4 +1,4 @@
-# This file contains the loop for the out of combat gameplay such as exploring
+# This file contains the loop for the out of combat gameplay such as exploring/traveling
 
 import random
 import time

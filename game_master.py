@@ -14,10 +14,11 @@ CHECK BOOK!
 import time
 import locator_game
 import random
-import item_import
+import data_import
 import intro_game
 
-ItemData = item_import.ItemData()
+ItemData = data_import.Item_Import()
+CharData = data_import.Char_Import()
 
 GameInputs = [1,2,3,4]
 
@@ -39,9 +40,8 @@ def MainGame():
 
     GameRunning = True
 
-    while GameRunning == True:
-        intro_game.StartScreen()
 
+    print(CharData)
 
 
 

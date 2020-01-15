@@ -2,7 +2,8 @@
 
 Item_DB = open('item_db.txt','r').read()
 
-def ItemData():
+
+def Item_Import():
 
     counter = 0
 
@@ -21,8 +22,6 @@ def ItemData():
 
         for element in data:    # Will need to expand this loop upon adding armor to text file
 
-
-
             if counter % 2 == 0:
                 Weapons.append(element)
 
@@ -32,6 +31,14 @@ def ItemData():
             counter += 1
 
 
-ItemData()
+def Char_Import():
 
+
+    with open('char_sheet.txt','r') as f:
+        character = tuple(f.read().splitlines())
+
+    return character
+
+
+Char_Import()
 

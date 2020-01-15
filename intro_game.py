@@ -1,5 +1,7 @@
 #Function to run the intro for the game
 
+import ui_elements
+
 char_sheet = open('char_sheet.txt','a') #Opens the character sheet to which all character creation info will be saved to
 
 
@@ -29,6 +31,25 @@ def Char_Save(type,info): #Type determines what line the info will be saved to i
         char_sheet.write(info)
         char_sheet.write('\n')
 
+    
+def StartingZone(p_name,p_race,p_class): # Function to run the start of the game
+        
+    print('''
+    You are''',p_name,'''the mighty''',p_race,p_class+".")
+
+    print('''
+    You awaken inside of a dilapitated clinic with no recollection of how you arrived here with no soul in sight.
+    What would you like to do?
+    1.) Walk out the front door.
+    2.) Search the cabinent.
+    3.) Enter the back room.''')
+
+    p_input = input('''
+    Choice: ''')
+
+
+
+
 def NewGame(): #This function runs the character creation for the game 
 
     print('''
@@ -40,7 +61,7 @@ def NewGame(): #This function runs the character creation for the game
     Enter your name.''')
 
     ng_name = input('''
-    ''').title()
+    Name: ''').title()
 
     Char_Save(1,ng_name)
 
@@ -71,8 +92,7 @@ def NewGame(): #This function runs the character creation for the game
     1.) Warrior | A melee dominant class that specializes in 2 handed weapons. 
     2.) Wizard  | A ranged magic class that specializes in wands and staves.
     3.) Thief   | A melee class that specializes in one handed weapons.
-    4.) Ranger  | A ranged class that specializes in bows and crossbows.
-    ''')
+    4.) Ranger  | A ranged class that specializes in bows and crossbows.''')
 
     class_choice = int(input('''
     Choice: '''))
@@ -88,10 +108,9 @@ def NewGame(): #This function runs the character creation for the game
 
     Char_Save(3,ng_class)
 
-    print('''
-    You are''',ng_name,'''the mighty''',ng_race,ng_class)
-
     # Need to write code to append stats corresponding to race/class choice to char_sheet.txt
+
+    StartingZone(ng_name,ng_race,ng_class)
 
 
 def StartScreen(): #This function defines the main menu for the game 
