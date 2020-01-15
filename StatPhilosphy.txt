@@ -1,0 +1,9 @@
+
+
+Strength = Modifies damage with 2 handed weapons 
+
+Stamina = Increases health
+
+Intellect = Modifies damage with wands and staves
+
+Agility = Modifies damage with one handed weapons and bow type weapons

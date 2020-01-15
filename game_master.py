@@ -19,6 +19,8 @@ import intro_game
 
 ItemData = item_import.ItemData()
 
+GameInputs = [1,2,3,4]
+
 
 def Player():
 
@@ -39,6 +41,10 @@ def MainGame():
 
     while GameRunning == True:
         intro_game.StartScreen()
+
+
+
+
 
 
 MainGame()
